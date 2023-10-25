@@ -1,33 +1,33 @@
-# Register Account
+# Регистрация аккаунта
 
-> This endpoint is used to register an account
+> Этот эндпоинт используется для регистрации аккаунта.
 
-## Parameters
+## Параметры
 
-| Parameter | Explanation | Optional |
+| Параметр | Объяснение | Обязателен |
 | --- | --- | --- |
-| `userName` | The username of the account to create | `False` |
-| `password` | The password of the account to create | `False` |
-| `email` | The email of the account to create | `False` |
-| `secret` | Account Secret: `Wmfv3899gc9` | `False` |
+| `userName` | Имя аккаунта | `True` |
+| `password` | Пароль аккаунта | `True` |
+| `email` | Email аккаунта | `True` |
+| `secret` | Account Secret: `Wmfv3899gc9` | `True` |
 
-## Response
+## Ответ
 
-**Successful Request**
+**Успешный запрос**
 
 ```
 1
 ```
 
-**Failed Request**
+**Безуспешный запрос**
 
-| Error Code | Meaning |
+| Код ошибки | Значение |
 | --- | --- |
-| -1 | Generic Error |
-| -2 | Username taken |
-| -3 | Email taken |
-| -4 | Username is longer than 20 characters |
-| -5 | Invalid Password |
-| -6 | Invalid Email |
-| -8 | Password to short |
-| -9 | Username to short |
+| -1 | Обычная ошибка |
+| -2 | Имя уже используется |
+| -3 | Email уже используется |
+| -4 | Длинна имени больше 20 символов |
+| -5 | Неверный пароль |
+| -6 | Неверный Email |
+| -8 | Пароль слишком короткий |
+| -9 | Имя слишком короткое |

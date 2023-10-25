@@ -1,36 +1,36 @@
 # updateGJAccSettings20.php
 
-Updates a user's account settings
+Обновляет настройки аккаунта
 
-## Parameters
+## Параметры
 
-### Required Parameters
+### Обязательные параметры
 
-**accountID** - The accountID of the user whose account is being updated
+**accountID** - accountID пользователя
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user whose account is being updated
+**gjp** - [GJP](/topics/encryption/gjp.md) пользователя
 
 **secret** - Wmfv3899gc9
 
-### Optional Parameters
+### Необязательные параметры
 
-**mS** - Who the user allows messages from: 0 for anyone, 1 for just friends, and 2 for no one
+**mS** - Кому пользователь разрешает отправлять сообщения: 0 - всем, 1 - только друзьям, и 2 - никому
 
-**frS** - Who the user allows friend requests from: 0 for anyone, and 1 for no one
+**frS** - Кому пользователь разрешает отправлять запросы в друзья: 0 - всем, и 1 - никому
 
-**cS** - Who the user allows to view their comments: 0 for anyone, 1 for just friends, and 2 for only themselves
+**cS** - Кому пользователь разрешает смотреть в историю его комментариев: 0 - всем, 1 - только друзьям, и 2 - никому
 
-**yt** - The end of the link to the user's youtube channel, after the `/channel/`. e.g. `UCZoN2WLAooS6uhREa9Cgpwg`
+**yt** - Конец ссылки на YouTube канал пользователя, тоесть то, что идет после `/channel/`. Например `UCZoN2WLAooS6uhREa9Cgpwg`
 
-**twitter** - The user's twitter handle
+**twitter** - Тег пользователя в X.
 
-**twitch** - The user's twitch username
+**twitch** - Имя в twitch
 
-## Response
+## Ответ
 
-1 if the required parameters are passed, regardless of anything is being updated, -1 otherwise
+1, если требуемые параметры одобрены, даже если ничего не обновляется, иначе -1
 
-## Example
+## Пример
 
 <!-- tabs:start -->
 
@@ -40,8 +40,8 @@ Updates a user's account settings
 import requests
 
 data = {
-    "accountID": 173831, # DevExit's account ID
-    "gjp": "********", # This would be DevExit's password encoded with GJP encryption
+    "accountID": 173831, # account ID аккаунта DevExit
+    "gjp": "********", # Это пароль аккаунта DevExit, зашифрованный через GJP
     "secret": "Wmfv3899gc9",
     "mS": 0,
     "frS": 0,
@@ -55,7 +55,7 @@ req = requests.post('http://boomlings.com/database/updateGJAccSettings20.php', d
 print(req.text)
 ```
 
-**Response**
+**Ответ**
 ```py
 1
 ```

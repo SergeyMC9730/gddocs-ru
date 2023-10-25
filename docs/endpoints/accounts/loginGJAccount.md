@@ -1,36 +1,36 @@
 # LoginGJAccount
 
-> This endpoint is used to log into a players Geometry Dash account.
+> Этот эндпоинт используется для входа в акканут.
 
-## Parameters
+## Параметры
 
-| Parameter  | Explanation                                                                                           | Optional |
-| :--------- | :---------------------------------------------------------------------------------------------------- | :------- |
-| `udid`     | [The user's Universal Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier) | `False`  |
-| `username` | The username for the account the player is trying to log into                                         | `False`  |
-| `password` | The plaintext password for the account the player is trying to log into                               | `False`  |
-| `sID`      | The player's steam ID                                                                                 | `True`   |
-| `secret`   | Account Secret: `Wmfv3899gc9`                                                                         | `False`  |
+| Пераметр   | Объяснение                                                                                            | Обязателен   |
+| :--------- | :---------------------------------------------------------------------------------------------------- | :----------- |
+| `udid`     | [The user's Universal Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier) | `True`       |
+| `username` | Имя аккаунта, в который вы хотите войти                                                               | `True`       |
+| `password` | Пароль аккаунта, в который вы хотите войти, в виде обычного текста                                    | `True`       |
+| `sID`      | SteamID игрока                                                                                        | `False`      |
+| `secret`   | Account Secret: `Wmfv3899gc9`                                                                         | `True`       |
 
-**Note** 
-the `sID` parameter is only sent to the servers if the player is logging into their account from the steam release of Geometry Dash. From what has been observed, it has not been utilised.
+**Замечание** 
+Параметр `sID` отправляется только тогда, когда клиент входит в аккаунт из Steam клиента Geometry Dash. Как показывает практика, он не используется.
 
-## Responses
+## Ответ
 
-A successful login attempt will return the players accountID and player ID seperated by a `,`
+При попытке успешного входа, сервер вернет вам accountID и playerID через запятую.
 
 ```py
-# response = 71,16
+# ответ = 71,16
 accountID, playerID = response.split(",")
 ```
 
-If the request was not successful, there are 7 different error codes that can be returned
+Если запрос не будет успешным, есть 7 разных кодов ошибок, которые могут быть возвращены 
 
 | Error Code | Meaning                                                                                                   |
 | :--------- | :-------------------------------------------------------------------------------------------------------- |
-| `-1`       | Generic Error                                                                                             |
-| `-8`       | If the user's password is less than 6 characters long                                                     |
-| `-9`       | If the user's Username is less than 3 characters long                                                     |
-| `-11`      | If the user's login credentials are incorrect                                                             |
-| `-12`      | If the user's account is disabled                                                                         |
-| `-13`      | If the account the user is trying to log into has a different steam ID to to that account **(Unused)** |
+| `-1`       | Обычная ошибка                                                                                            |
+| `-8`       | Длинна пароля меньше шести символов                                                                       |
+| `-9`       | Длинна имени меньше трёх символов                                                                         |
+| `-11`      | Неправильное имя или пароль                                                                               |
+| `-12`      | Аккаунт заблокирован                                                                                      |
+| `-13`      | Пользователь пытается войти в аккаунт с разным steamID **(Неиспользуется)**                               |

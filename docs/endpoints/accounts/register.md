@@ -1,3 +1,3 @@
 # accounts/register.php
 
-Account registration via a webpage
+Регистрация аккаунта через веб-страницу
