@@ -1,28 +1,28 @@
 # uploadGJComment21.php
 
-Uploads a comment to a user level.
+Добавляет комментарий под уровнем.
 
-## Parameters
+## Параметры
 
-### Required Parameters
+### Обязательные параметры
 
-**accountID** - The commenter's account ID
+**accountID** - ID аккаунта комментатора
 
-**gjp** - The commenter's [GJP](/topics/encryption/gjp.md)
+**gjp** - [GJP](/topics/encryption/gjp.md) комментатора
 
-**userName** - The commenter's username
+**userName** - Имя комментатора
 
-**comment** - The comment, converted to [URL-safe base64](/topics/encryption/base64)
+**comment** - Текст комментария, конвертированный в [URL-safe base64](/topics/encryption/base64)
 
 **secret** - Wmfd2893gb7
 
-**levelID** - The ID of the level to comment on
+**levelID** - ID уровня, под которым будет комментарий
 
-**percent** - The level percentage shown on the comment
+**percent** - Прогресс уровня, который будет показан в комментарии
 
 [**chk**](/topics/encryption/chk) - `userName` + `comment` + `levelID` + `percent`
 
-### Optional Parameters
+### Необязательные параметры
 
 **gameVersion** - 21
 
@@ -30,11 +30,11 @@ Uploads a comment to a user level.
 
 **gdw** - 0
 
-## Response
+## Ответ
 
-Returns the ID of the posted comment, or `-1` if the request was rejected.
+Возвращает ID отправленного комментария или `-1`, если запрос отклонён.
 
-## Example
+## Пример
 
 <!-- tabs:start -->
 
@@ -43,14 +43,14 @@ Returns the ID of the posted comment, or `-1` if the request was rejected.
 ```py
 import requests
 
-# With this code, DevExit is posting the comment "Hello from the GDDocs!" to 62687277
+# Этот код выложит комментарий от DevExit с текстом "Hello from the GDDocs!" под уровнем 62687277
 
 chk = generate_chk(key="29481", values=["devexit", "SGVsbG8gZnJvbSB0aGUgR0REb2NzIQ==", 62687277, 69], salt="0xPT6iUrtws0J")
-# These values can be found in the XOR and CHK pages
+# Эти значения могут быть найдены в страницах про XOR и CHK
 
 data = {
-    "accountID": 173831, # DevExit's account ID
-    "gjp": "********", # This would be DevExit's password encoded with GJP encryption
+    "accountID": 173831, # ID аккаунта DevExit
+    "gjp": "********", # Это пароль аккаунта DevExit, зашифрованный через GJP
     "userName": "devexit",
     "comment": "SGVsbG8gZnJvbSB0aGUgR0REb2NzIQ==", # "Hello from the GDDocs!"
     "levelID": 62687277,
@@ -63,7 +63,7 @@ req = requests.post("http://boomlings.com/database/uploadGJComment21.php", data=
 print(req.text)
 ```
 
-**Response**
+**Ответ**
 ```py
 31444784
 ```

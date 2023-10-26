@@ -6,7 +6,7 @@
 
 ### Обязательные параметры
 
-**accountID** - accountID пользователя
+**accountID** - ID аккаунта пользователя
 
 **gjp** - [GJP](/topics/encryption/gjp.md) пользователя
 
@@ -40,7 +40,7 @@
 import requests
 
 data = {
-    "accountID": 173831, # account ID аккаунта DevExit
+    "accountID": 173831, # ID аккаунта DevExit
     "gjp": "********", # Это пароль аккаунта DevExit, зашифрованный через GJP
     "secret": "Wmfv3899gc9",
     "mS": 0,

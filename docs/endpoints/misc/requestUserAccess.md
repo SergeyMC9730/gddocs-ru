@@ -34,7 +34,6 @@ Requests moderator access
 import requests
 
 data = {
-	data = {
     'accountID': 173831, # DevExit's account ID
     'gjp': "********", # This would be DevExit's password encoded with GJP encryption
     "secret": "Wmfd2893gb7"
