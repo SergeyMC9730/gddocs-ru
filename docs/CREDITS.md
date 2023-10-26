@@ -1,6 +1,6 @@
-# Credits
+# Благодарности
 
-> **The GD Docs Project is maintained by [Wylie](https://github.com/Wyliemaster) and is backed by [GD Programming](https://discord.gg/gd-programming-646101505417674758) which is owned by [SMJS](https://github.com/SMJSGaming)**
+> **The GD Docs is maintained by [Wylie](https://github.com/Wyliemaster) and is backed by [GD Programming](https://discord.gg/gd-programming-646101505417674758) which is owned by [SMJS](https://github.com/SMJSGaming)**
 
 ## Special Thanks
 

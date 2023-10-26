@@ -1,6 +1,6 @@
-# Miko's Playground
+# Песочница Miko
 
-You're able to use this publicly, just like a sandbox. Please make sure ***not*** to commit this ***EVER***.
+Вы можете использовать это публично, как обычную песочницу. Только пожалуйста, ***НИКОГДА не*** коммитьте её.
 
 <!-- tabs:start -->
 
@@ -22,11 +22,11 @@ def decode_level_password(password: str) -> str:
 
 ### **java**
 
-fuck it
+пошло оно нахуй
 
 <!-- tabs:end -->
 
-\* = do you like disclaimers, i don't
+\* = тебе нравятся дисклеймеры? мне нет
 
 <div class="projects_card">
     <a href="$" class="project_card_background-container">         
@@ -46,7 +46,7 @@ fuck it
                 </div>
                 <div class="projects_card_authors">
                 <div class="u-ellipsis-overflow">
-                        Team GDProgramming
+                        Команда GDProgramming
                     </div>
                 </div>
             </div>
