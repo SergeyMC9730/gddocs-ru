@@ -6,7 +6,7 @@
 
 ### **python**
 
-import this
+импортируйте это
 
 ```py
 import base64
@@ -26,7 +26,7 @@ def decode_level_password(password: str) -> str:
 
 <!-- tabs:end -->
 
-\* = тебе нравятся дисклеймеры? мне нет
+\* = тебе нравятся дисклеймеры? мне вот нет
 
 <div class="projects_card">
     <a href="$" class="project_card_background-container">         

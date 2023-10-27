@@ -4,7 +4,7 @@
 
 - Geometry Dash uses `ECB` mode and a 256-bit key for encrypting and descrypting data
 
-## AES Key
+## Ключ AES
 
 - The key used by Geometry Dash is:
 
@@ -12,16 +12,16 @@
   69 70 75 39 54 55 76 35 34 79 76 5d 69 73 46 4d 68 35 40 3b 74 2e 35 77 33 34 45 32 52 79 40 7b
   ```
 
-## Padding
+## Отступ
 
 - The plaintext data sometimes may not perfectly align and therefore, some padding is implemented
 
 <!-- tabs:start -->
 
-### **Implement Padding**
+### **Имплементация отступа**
 
 ```js
-// Pseudocode
+// Псевдокод
 pad_offset = data.length % 16;
 
 if (pad_offset != 0) {
@@ -33,10 +33,10 @@ if (pad_offset != 0) {
 }
 ```
 
-### **Remove Padding**
+### **Удаление отступа**
 
 ```js
-// Pseudocode
+// Пседвокод
 total_padding = data.last_byte();
 
 if (total_padding < 16) {
@@ -46,16 +46,16 @@ if (total_padding < 16) {
 
 <!-- tabs:end -->
 
-## Implementation
+## Имплементация
 
 - Decrypting and Encrypting data with AES is pretty simple
 
 <!-- tabs:start -->
 
-### **Encrypt**
+### **Кодирование**
 
 ```js
-// Pseudocode
+// Псевдокод
 data = addPadding(data);
 
 cipher = AES.new(
@@ -67,10 +67,10 @@ cipher = AES.new(
 encrypted_data = cipher.encrypt(data);
 ```
 
-### **Decrypt**
+### **Дешифровка**
 
 ```js
-// Pseudocode
+// Псевдокод
 cipher = AES.new(
   "\x69\x70\x75\x39\x54\x55\x76\x35\x34\x79\x76\x5d\x69\x73\x46\x4d
   \x68\x35\x40\x3b\x74\x2e\x35\x77\x33\x34\x45\x32\x52\x79\x40\x7b",

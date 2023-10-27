@@ -1,20 +1,20 @@
 # deleteGJLevelUser20.php
 
-Deletes a level from the server.
+Удаляет уровень со сервера.
 
-## Parameters
+## Параметры
 
-### Required Parameters
+### Требуемые параметры
 
-**accountID** - The level author's account ID
+**accountID** - Айди аккунта автора уровня
 
-**gjp** - The level author's [GJP](/topics/encryption/gjp.md)
+**gjp** - [GJP](/topics/encryption/gjp.md) автора уровня
 
-**levelID** - The ID of the level being deleted
+**levelID** - Айди удаляемого уровня
 
 **secret** - Wmfv2898gc9
 
-### Optional Parameters
+### Дополнительные параметры
 
 **gameVersion** - 21
 
@@ -22,11 +22,11 @@ Deletes a level from the server.
 
 **gdw** - 0
 
-## Response
+## Ответ
 
-Returns 1 if deleted, -1 if it failed or the level does not exist.
+Возвращает 1 если удалён, -1 если действие было провалено или уровень не существует.
 
-## Example
+## Пример
 
 <!-- tabs:start -->
 
@@ -35,11 +35,11 @@ Returns 1 if deleted, -1 if it failed or the level does not exist.
 ```py
 import requests
 
-# With this code, DevExit is deleting the level with ID 62689548
+# С помощью данного кода DevExit удаляет уровень с его айди 62689548
 
 data = {
-        "accountID": 173831, # DevExit's account ID
-        "gjp": "********", # This would be DevExit's password encoded with GJP encryption
+        "accountID": 173831, # Айди аккаунта DevExit
+        "gjp": "********", # Зашифрованный с помощью GJP пароль DevExit
         "levelID": 62689548,
         "secret": "Wmfv2898gc9"
 }
@@ -48,7 +48,7 @@ req = requests.post("http://boomlings.com/database/deleteGJLevelUser20.php", dat
 print(req.text)
 ```
 
-**Response**
+**Ответ**
 ```py
 1
 ```

@@ -93,6 +93,9 @@
   - [uploadFriendRequest20](/endpoints/socials/UploadFriendRequest20.md)
   - [uploadGJMessage20](/endpoints/socials/uploadGJMessage20.md)
 **Мультиплеер**
+  - [joinMPLobby](/endpoints/versus/joinMPLobby.md)
+  - [uploadMPComment](/endpoints/versus/uploadMPComment.md)
+  - [exitMPLobby](/endpoints/versus/exitMPLobby.md)
 **Награды**
   - [getGJChallenges](/endpoints/rewards/getGJChallenges.md)
   - [getGJRewards](/endpoints/rewards/getGJRewards.md)
@@ -107,11 +110,14 @@
   - [likeGJItem211](/endpoints/misc/likeGJItem211.md)
   - [requestUserAccess](/endpoints/misc/requestUserAccess.md)
   - [restoreGJItems](/endpoints/misc/restoreGJItems.md)
+**Административные**
+  - [backupLevels001](/endpoints/admin/backupLevels001.md)
+  - [createLeaderboardStats.php](/endpoints/admin/createLeaderboardStats.php)
 - **Тематики**
   - [GJP](/topics/gjp.md)
   - [Пароли уровнение](/topics/level_passwords.md)
   - [Шифрование/Расшифрование уровней](/topics/levelstring_encoding_decoding.md)
-  - [Encryption/Decryption файлов сохранений](/topics/localfiles_encrypt_decrypt.md)
+  - [Encryption/De  <meta property="og:url" content="https://wyliemaster.github.io/gddocs/#/" />cryption файлов сохранений](/topics/localfiles_encrypt_decrypt.md)
   - [Статусы](/topics/status_codes.md)
   - [Коды Хранилищ](/topics/vault_codes.md)
   - [Магазин](/topics/shop)
