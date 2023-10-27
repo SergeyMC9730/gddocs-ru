@@ -1,22 +1,22 @@
 # deleteGJComment20.php
 
-Deletes a level comment.
+Удаляет комментарий под уровнем
 
-## Parameters
+## Параметры
 
-### Required Parameters
+### Обязательные параметры
 
-**accountID** - The account ID of the user who is deleting the comment
+**accountID** - ID аккаунта пользователя, который удаляет комментарий
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user who is deleting the comment
+**gjp** - [GJP](/topics/encryption/gjp.md) пользователя, который удаляет комментарий
 
-**commentID** - ID of the comment
+**commentID** - ID комментария
 
-**levelID** - ID of the level the comment is on
+**levelID** - ID уровня, под которым находится комментарий
 
 **secret** - Wmfd2893gb7
 
-### Optional Parameters
+### Необязательные параметры
 
 **gameVersion** - 21
 
@@ -24,11 +24,11 @@ Deletes a level comment.
 
 **gdw** - 0
 
-## Response
+## Ответ
 
-Returns 1 if deleted, -1 if not.
+Возвращает 1, если комментарий удален, иначе -1.
 
-## Example
+## Пример
 
 <!-- tabs:start -->
 
@@ -37,11 +37,11 @@ Returns 1 if deleted, -1 if not.
 ```py
 import requests
 
-# With this code, DevExit is deleting the comment with ID 31415926
+# Этот код удалит комментарий DevExit с ID 31415926
 
 data = {
-        "accountID": 173831, # DevExit's account ID
-        "gjp": "********", # This would be DevExit's password encoded with GJP encryption
+        "accountID": 173831, # ID аккаунта DevExit
+        "gjp": "********", # Это пароль аккаунта DevExit, зашифрованный через GJP
         "commentID": 31415926,
         "levelID": 54953085,
         "secret": "Wmfd2893gb7"
@@ -51,7 +51,7 @@ req = requests.post("http://boomlings.com/database/deleteGJComment20.php", data=
 print(req.text)
 ```
 
-**Response**
+**Ответ**
 ```py
 1
 ```

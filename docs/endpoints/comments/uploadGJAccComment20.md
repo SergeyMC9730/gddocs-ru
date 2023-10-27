@@ -1,20 +1,20 @@
 # uploadGJAccComment20.php
 
-Posts an account comment
+Добавляет комментарий под профилем
 
-## Parameters
+## Параметры
 
-### Required Parameters
+### Обязательные параметры
 
-**accountID** - Account ID of the user posting the comment
+**accountID** - ID аккаунта пользователя, который хочет отправить комментарий
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user posting the comment
+**gjp** - [GJP](/topics/encryption/gjp.md) пользователя, который хочет отправить комментарий
 
-**comment** - The comment's text, converted to [URL-safe base64](/topics/encryption/base64).
+**comment** - Текст комментария, конвертированный в [URL-safe base64](/topics/encryption/base64).
 
 **secret** - Wmfd2893gb7
 
-### Optional Parameters
+### Необязательные параметры
 
 **gameVersion** - 21
 
@@ -22,15 +22,15 @@ Posts an account comment
 
 **gdw** - 0
 
-**cType** - The comment type, 0 for level, 1 for user
+**cType** - Тип комментария, 0 - под уровнем, 1 под профилем (что?)
 
-[**chk**](/topics/encryption/chk?id=comment) - Unsure
+[**chk**](/topics/encryption/chk?id=comment) - Неуверен.
 
-## Response
+## Ответ
 
-Returns account comment ID if the comment was successfully posted, but a 500 error code if the comment is either left out or could not be posted
+Возвращает ID комментария под профилем, если он был успешно отправлен или ошибку 500, если комментарий не может быть отправлен
 
-## Example
+## Пример
 
 <!-- tabs:start -->
 
@@ -40,8 +40,8 @@ Returns account comment ID if the comment was successfully posted, but a 500 err
 import requests
 
 data = {
-    "accountID": 173831, # DevExit's account ID
-    "gjp": "********", # This would be DevExit's password encoded with GJP encryption
+    "accountID": 173831, # ID аккаунта DevExit
+    "gjp": "********", # Это пароль аккаунта DevExit, зашифрованный через GJP
     "comment": base64.b64encode(b"This comment was uploaded for the GD Docs!").decode(),
     "secret": "Wmfd2893gb7",
 }
@@ -50,7 +50,7 @@ r = requests.post('http://boomlings.com/database/uploadGJAccComment20.php', data
 print(req.text)
 ```
 
-**Response**
+**Ответ**
 ```py
 1772719
 ```

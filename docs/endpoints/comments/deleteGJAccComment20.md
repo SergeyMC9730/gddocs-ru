@@ -1,20 +1,20 @@
 # deleteGJAccComment20.php
 
+Удаляет комментарий под профилем
 
+## Параметры
 
-## Parameters
+### Обязательные параметры
 
-### Required Parameters
+**accountID** - ID аккаунта пользователя
 
-**accountID** - Account ID of the user deleting the comment
+**gjp** - [GJP](/topics/encryption/gjp.md) пользователя
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user deleting the comment
-
-**commentID** - The ID of the comment being deleted (Returned by [uploadGJAccComment20](/endpoints/uploadGJAccComment20.md))
+**commentID** - ID комментария, который будет удалён (Возвращается от [uploadGJAccComment20](/endpoints/uploadGJAccComment20.md))
 
 **secret** - Wmfd2893gb7
 
-### Optional Parameters
+### Необязательные параметры
 
 **gameVersion** - 21
 
@@ -22,11 +22,11 @@
 
 **gdw** - 0
 
-## Response
+## Ответ
 
-1 if the comment was deleted, -1 if there was an error
+1, если комментарий был удалён, -1, если произошла ошибка
 
-## Example
+## Пример
 
 <!-- tabs:start -->
 
@@ -35,11 +35,12 @@
 ```py
 import requests
 
-# With this code, DevExit is deleting his account comment with ID 1772717
+# Этот код удалит комментарий от DevExit с ID 1772717
+# (на самом деле не удалит потому что надо очистить User-Agent)
 
 data = {
-    "accountID": 173831, # DevExit's account ID
-    "gjp": "********", # This would be DevExit's password encoded with GJP encryption
+    "accountID": 173831, # ID аккаунта DevExit
+    "gjp": "********", # Это пароль аккаунта DevExit, зашифрованный через GJP
     "commentID": 1772717,
     "secret": "Wmfd2893gb7"
 }
@@ -48,7 +49,7 @@ r = requests.post('http://boomlings.com/database/deleteGJAccComment20.php', data
 print(req.text)
 ```
 
-**Response**
+**Ответ**
 ```py
 1
 ```
