@@ -117,7 +117,7 @@
   - [GJP](/topics/gjp.md)
   - [Пароли уровнение](/topics/level_passwords.md)
   - [Шифрование/Расшифрование уровней](/topics/levelstring_encoding_decoding.md)
-  - [Encryption/De  <meta property="og:url" content="https://wyliemaster.github.io/gddocs/#/" />cryption файлов сохранений](/topics/localfiles_encrypt_decrypt.md)
+  - [Шифрование/Рас<meta property="og:url" content="https://gdprogramming.ru/#/" />шифровка файлов сохранений](/topics/localfiles_encrypt_decrypt.md)
   - [Статусы](/topics/status_codes.md)
   - [Коды Хранилищ](/topics/vault_codes.md)
   - [Магазин](/topics/shop)
