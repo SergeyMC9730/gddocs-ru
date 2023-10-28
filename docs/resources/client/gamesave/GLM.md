@@ -1,6 +1,6 @@
-# GLM
+# ГМУ
 
-GLM (Global Levels Manager) are various Dictionaries that contain every bit of information you need to know about online levels
+ГМУ (Глобальный Менеджер Уровней) *(англ. GML)* are various Dictionaries that contain every bit of information you need to know about online levels
 
 ## GLM_01
 
